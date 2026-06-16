@@ -1,4 +1,4 @@
-​<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -6,128 +6,126 @@
 <title>Ministerio de Justicia</title>
 <style>
 :root {
---primary-color: #002060; /* Azul fuerte /
---accent-color: #D4AF37; / Dorado */
+--primary-color: #0d2b45;
+--secondary-color: #c5a059;
 --text-color: #ffffff;
 }
-​body {
-font-family: 'Arial', sans-serif;
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 margin: 0;
 padding: 0;
 background-color: var(--primary-color);
 color: var(--text-color);
 }
-​header {
+header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 40px;
-background-color: #00153d;
-border-bottom: 3px solid var(--accent-color);
+background-color: #07192b;
+padding: 20px 50px;
+border-bottom: 4px solid var(--secondary-color);
 }
-​.logo {
-color: var(--accent-color);
+.logo {
 font-size: 24px;
 font-weight: bold;
+color: var(--secondary-color);
 }
-​nav {
+nav {
 display: flex;
 align-items: center;
 }
-​.nav-links {
+.nav-links {
 list-style: none;
 display: flex;
 margin: 0;
 padding: 0;
 }
-​.nav-links li {
-margin-left: 20px;
+.nav-links li {
+margin-left: 30px;
 }
-​.nav-links a {
+.nav-links a {
 color: var(--text-color);
 text-decoration: none;
 font-size: 16px;
 transition: color 0.3s;
 }
-​.nav-links a:hover, .nav-links a.active {
-color: var(--accent-color);
+.nav-links a:hover, .nav-links a.active {
+color: var(--secondary-color);
 font-weight: bold;
 }
-​.hamburger {
+.menu-toggle {
 display: none;
 flex-direction: column;
 cursor: pointer;
 }
-​.hamburger span {
+.menu-toggle span {
 height: 3px;
 width: 25px;
-background: var(--accent-color);
+background: var(--secondary-color);
 margin-bottom: 4px;
-border-radius: 5px;
+border-radius: 4px;
 }
-​main {
-padding: 40px;
+main {
+padding: 50px;
 text-align: center;
 }
-​.hero-image {
-max-width: 100%;
-height: auto;
-border: 5px solid var(--accent-color);
-border-radius: 10px;
-margin-top: 20px;
+h1 {
+color: var(--secondary-color);
+margin-bottom: 10px;
 }
-​@media (max-width: 768px) {
+@media (max-width: 768px) {
 .nav-links {
 display: none;
 flex-direction: column;
 position: absolute;
-top: 70px;
+top: 76px;
 right: 0;
-background-color: #00153d;
+background-color: #07192b;
 width: 100%;
 text-align: center;
-border-bottom: 3px solid var(--accent-color);
+border-bottom: 4px solid var(--secondary-color);
+padding-bottom: 20px;
 }
-​.nav-links.active {
+.nav-links.active {
 display: flex;
 }
-​.nav-links li {
-margin: 10px 0;
+.nav-links li {
+margin: 15px 0 0;
 }
-​.hamburger {
+.menu-toggle {
 display: flex;
 }
 }
 </style>
 </head>
 <body>
-​<header>
-<div class="logo">Logotipo</div>
-<div class="hamburger" onclick="toggleMenu()">
+<header>
+<div class="logo">Ministerio de Justicia</div>
+<div class="menu-toggle" id="mobile-menu">
 <span></span>
 <span></span>
 <span></span>
 </div>
 <nav>
-<ul class="nav-links" id="menu">
+<ul class="nav-links" id="nav-list">
 <li><a href="#" class="active">Inicio</a></li>
+<li><a href="#">Conócenos</a></li>
 <li><a href="#">Instituto Bíblico</a></li>
 <li><a href="#">Galería</a></li>
 <li><a href="#">Contacto</a></li>
 </ul>
 </nav>
 </header>
-​<main>
-<h1>Ministerio de Justicia</h1>
-<h2>Página Malaquías 4:2</h2>
-<!-- Puedes cambiar la ruta de la imagen en el atributo src -->
-<img src="imagen.jpg" alt="Imagen representativa" class="hero-image">
+<main>
+<h1>Bienvenidos a Nuestro Sitio</h1>
+<p>Una página dedicada a Malaquías 4:2.</p>
 </main>
-​<script>
-function toggleMenu() {
-const menu = document.getElementById("menu");
-menu.classList.toggle("active");
-}
+<script>
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+mobileMenu.addEventListener('click', () => {
+navList.classList.toggle('active');
+});
 </script>
-​</body>
+</body>
 </html>
