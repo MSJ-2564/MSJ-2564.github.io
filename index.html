@@ -3,32 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ministerio de Justicia</title>
+<title>Ministerios Sol de Justicia</title>
 <style>
 :root {
---primary-color: #0d2b45;
---secondary-color: #c5a059;
---text-color: #ffffff;
+--primary-bg: #071330;
+--secondary-gold: #c5a059;
+--white-text: #ffffff;
 }
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 margin: 0;
 padding: 0;
-background-color: var(--primary-color);
-color: var(--text-color);
+background-color: var(--primary-bg);
+color: var(--white-text);
 }
 header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: #07192b;
+background-color: #040916;
 padding: 20px 50px;
-border-bottom: 4px solid var(--secondary-color);
+border-bottom: 4px solid var(--secondary-gold);
 }
-.logo {
+.logo-container {
+display: flex;
+align-items: center;
 font-size: 24px;
 font-weight: bold;
-color: var(--secondary-color);
+}
+.logo-img {
+max-width: 50px;
+height: auto;
+margin-right: 15px;
+}
+.logo-text-ministerios {
+color: var(--white-text);
+}
+.logo-text-gold {
+color: var(--secondary-gold);
 }
 nav {
 display: flex;
@@ -44,13 +56,13 @@ padding: 0;
 margin-left: 30px;
 }
 .nav-links a {
-color: var(--text-color);
+color: var(--white-text);
 text-decoration: none;
 font-size: 16px;
 transition: color 0.3s;
 }
 .nav-links a:hover, .nav-links a.active {
-color: var(--secondary-color);
+color: var(--secondary-gold);
 font-weight: bold;
 }
 .menu-toggle {
@@ -61,7 +73,7 @@ cursor: pointer;
 .menu-toggle span {
 height: 3px;
 width: 25px;
-background: var(--secondary-color);
+background: var(--secondary-gold);
 margin-bottom: 4px;
 border-radius: 4px;
 }
@@ -70,7 +82,7 @@ padding: 50px;
 text-align: center;
 }
 h1 {
-color: var(--secondary-color);
+color: var(--secondary-gold);
 margin-bottom: 10px;
 }
 @media (max-width: 768px) {
@@ -80,10 +92,10 @@ flex-direction: column;
 position: absolute;
 top: 76px;
 right: 0;
-background-color: #07192b;
+background-color: #040916;
 width: 100%;
 text-align: center;
-border-bottom: 4px solid var(--secondary-color);
+border-bottom: 4px solid var(--secondary-gold);
 padding-bottom: 20px;
 }
 .nav-links.active {
@@ -100,7 +112,14 @@ display: flex;
 </head>
 <body>
 <header>
-<div class="logo">Ministerio de Justicia</div>
+<div class="logo-container">
+<!-- Inserta aquí la ruta de tu imagen de logo -->
+<img src="tu-logo.png" alt="Logo" class="logo-img">
+<div>
+<span class="logo-text-ministerios">Ministerios</span>
+<span class="logo-text-gold">Sol de Justicia</span>
+</div>
+</div>
 <div class="menu-toggle" id="mobile-menu">
 <span></span>
 <span></span>
