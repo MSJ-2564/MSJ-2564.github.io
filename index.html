@@ -1,225 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Ministerios Sol de Justicia</title>
- <style>
- :root {
- --azul-fondo: #0a192f;
- --dorado-brillante: #d4af37;
- --blanco: #ffffff;
- }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministerios Sol de Justicia</title>
+    <style>
+        :root {
+            --azul-fondo: #0a192f;
+            --dorado-brillante: #d4af37;
+            --blanco: #ffffff;
+        }
 
- body {
- margin: 0;
- font-family: Arial, sans-serif;
- background-color: var(--azul-fondo);
- color: var(--blanco);
- }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--azul-fondo);
+            color: var(--blanco);
+        }
 
- header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 20px 40px;
- background-color: #07101e;
- border-bottom: 2px solid var(--dorado-brillante);
- }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #07101e;
+            border-bottom: 2px solid var(--dorado-brillante);
+        }
 
- .logo {
- display: flex;
- align-items: center;
- }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
 
- .logo img {
- height: 50px;
- margin-right: 15px;
- }
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
 
- .logo h1 {
- font-size: 20px;
- margin: 0;
- color: var(--blanco);
- }
+        .logo h1 {
+            font-size: 20px;
+            margin: 0;
+            color: var(--blanco);
+        }
 
- nav ul {
- list-style: none;
- display: flex;
- margin: 0;
- padding: 0;
- }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
- nav ul li {
- margin-left: 20px;
- }
+        nav ul li {
+            margin-left: 20px;
+        }
 
- nav ul li a {
- color: var(--blanco);
- text-decoration: none;
- font-size: 16px;
- }
+        nav ul li a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-size: 16px;
+        }
 
- nav ul li a.destacado {
- background-color: var(--dorado-brillante);
- color: var(--azul-fondo);
- padding: 10px 20px;
- border-radius: 5px;
- font-weight: bold;
- }
+        nav ul li a.destacado {
+            background-color: var(--dorado-brillante);
+            color: var(--azul-fondo);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
 
- #inicio {
- text-align: center;
- padding: 80px 20px;
- }
+        #inicio {
+            text-align: center;
+            padding: 80px 20px;
+        }
 
- #inicio h2 {
- font-size: 36px;
- margin-bottom: 10px;
- }
+        #inicio h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
 
- #inicio .sol-de-justicia {
- font-family: 'Great Vibes', 'Brush Script MT', cursive;
- color: var(--dorado-brillante);
- font-size: 64px;
- display: block;
- margin-bottom: 30px;
- text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
- }
+        #inicio .sol-de-justicia {
+            font-family: 'Great Vibes', 'Brush Script MT', cursive;
+            color: var(--dorado-brillante);
+            font-size: 64px;
+            display: block;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
- #inicio p {
- max-width: 800px;
- margin: 0 auto 40px auto;
- line-height: 1.6;
- font-size: 18px;
- }
+        #inicio p {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+            font-size: 18px;
+        }
 
- .btn-principal {
- background-color: var(--dorado-brillante);
- color: var(--azul-fondo);
- padding: 15px 40px;
- border: none;
- border-radius: 5px;
- font-size: 18px;
- font-weight: bold;
- cursor: pointer;
- text-decoration: none;
- display: inline-block;
- margin-bottom: 50px;
- }
+        .btn-principal {
+            background-color: var(--dorado-brillante);
+            color: var(--azul-fondo);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
 
- .botones-ubicacion {
- display: flex;
- justify-content: center;
- gap: 20px;
- }
+        .botones-ubicacion {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
- .btn-secundario {
- background-color: transparent;
- border: 2px solid var(--dorado-brillante);
- color: var(--blanco);
- padding: 10px 25px;
- border-radius: 5px;
- font-size: 16px;
- cursor: pointer;
- }
+        .btn-secundario {
+            background-color: transparent;
+            border: 2px solid var(--dorado-brillante);
+            color: var(--blanco);
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
- .seccion-mision {
- padding: 100px 40px;
- background-color: #0c233a;
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 40px;
- flex-wrap: wrap;
- }
+        .seccion-mision {
+            padding: 100px 40px;
+            background-color: #0c233a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
 
- .texto-mision {
- max-width: 600px;
- }
+        .texto-mision {
+            max-width: 600px;
+        }
 
- .texto-mision h3 {
- color: var(--dorado-brillante);
- font-size: 32px;
- margin-bottom: 20px;
- }
+        .texto-mision h3 {
+            color: var(--dorado-brillante);
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
 
- .recipiente-foto {
- width: 400px;
- height: 300px;
- border: 2px solid var(--dorado-brillante);
- border-radius: 10px;
- display: flex;
- justify-content: center;
- align-items: center;
- color: var(--dorado-brillante);
- font-weight: bold;
- background-color: rgba(0, 0, 0, 0.2);
- }
+        .recipiente-foto {
+            width: 400px;
+            height: 300px;
+            border: 2px solid var(--dorado-brillante);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--dorado-brillante);
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
 
- .hamburger {
- display: none;
- background: none;
- border: none;
- color: var(--blanco);
- font-size: 30px;
- cursor: pointer;
- }
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--blanco);
+            font-size: 30px;
+            cursor: pointer;
+        }
 
- @media (max-width: 768px) {
- nav ul {
- display: none;
- }
- .hamburger {
- display: block;
- }
- }
- </style>
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
 
- <header>
- <div class="logo">
- <img src="mejor_nitidez_y_realismo_de_imagen_medio_5_20260615_091625_40.png" alt="Ministerios Sol de Justicia">
- <h1>Ministerios Sol de Justicia</h1>
- </div>
- <button class="hamburger" aria-label="Abrir menú">☰</button>
- <nav>
- <ul>
- <li><a href="#inicio">Inicio</a></li>
- <li><a href="#conocenos">Conócenos</a></li>
- <li><a href="#instituto-biblico">Instituto Bíblico</a></li>
- <li><a href="#galeria">Galería</a></li>
- <li><a href="#eventos">Eventos</a></li>
- <li><a href="#unete" class="destacado">Únete</a></li>
- </ul>
- </nav>
- </header>
+    <header>
+        <div class="logo">
+            <img src="Mejorar nitidez y realismo de imagen-5_20260615_091625_0000.png" alt="Ministerios Sol de Justicia">
+            <h1>Ministerios Sol de Justicia</h1>
+        </div>
+        <button class="hamburger" aria-label="Abrir menú">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#conocenos">Conócenos</a></li>
+                <li><a href="#instituto-biblico">Instituto Bíblico</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#unete" class="destacado">Únete</a></li>
+            </ul>
+        </nav>
+    </header>
 
- <main>
- <section id="inicio">
- <h2>Ministerios</h2>
- <span class="sol-de-justicia">Sol de Justicia</span>
- <p>Malaquías 4:2</p>
- <p>"Mas a vosotros los que teméis mi nombre, nacerá el Sol de justicia, y en sus alas traerá salvación; y saldréis, y saltaréis como becerros de la manada."</p>
- <a href="#mision" class="btn-principal">Descubre más</a>
- <div class="botones-ubicacion">
- <button class="btn-secundario">Ciudad Juárez, Chih.</button>
- <button class="btn-secundario">Torreón, Coah.</button>
- <button class="btn-secundario">Veracruz, Chiapas y más</button>
- </div>
- </section>
+    <main>
+        <section id="inicio">
+            <h2>Ministerios</h2>
+            <span class="sol-de-justicia">Sol de Justicia</span>
+            <p>Malaquías 4:2</p>
+            <p>"Mas a vosotros los que teméis mi nombre, nacerá el Sol de justicia, y en sus alas traerá salvación; y saldréis, y saltaréis como becerros de la manada."</p>
+            <a href="#mision" class="btn-principal">Descubre más</a>
+            <div class="botones-ubicacion">
+                <button class="btn-secundario">Ciudad Juárez, Chih.</button>
+                <button class="btn-secundario">Torreón, Coah.</button>
+                <button class="btn-secundario">Veracruz, Chiapas y más</button>
+            </div>
+        </section>
 
- <section id="mision" class="seccion-mision">
- <div class="texto-mision">
- <h3>Nuestra Misión</h3>
- <p>Aquí puedes escribir la descripción de la misión del ministerio. Este espacio es totalmente editable para que lo actualices cuando quieras.</p>
- </div>
- <div class="recipiente-foto">
- <span>Espacio para tu fotografía</span>
- </div>
- </section>
- </main>
+        <section id="mision" class="seccion-mision">
+            <div class="texto-mision">
+                <h3>Nuestra Misión</h3>
+                <p>Aquí puedes escribir la descripción de la misión del ministerio. Este espacio es totalmente editable para que lo actualices cuando quieras.</p>
+            </div>
+            <div class="recipiente-foto">
+                <span>Espacio para tu fotografía</span>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
