@@ -53,13 +53,15 @@
         }
 
         nav ul li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
 
         nav ul li a {
             color: var(--blanco);
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         nav ul li a.destacado {
@@ -89,15 +91,15 @@
             animation: subirLento 2s ease-out;
         }
 
-        /* --- AQUÍ MODIFIQUE EL GIF DEL PASTOR --- */
         .foto-pastor-salgado {
             position: absolute;
-            top: 40px; /* Ajusta este número si quieres que suba o baje más */
-            right: 8%; /* Lo mantiene a la derecha pero visible */
-            height: 380px; /* Tamaño ampliado para que llegue a la altura de las letras */
-            width: auto; /* Evita que el GIF se deforme */
+            top: 40px;
+            right: 8%;
+            height: 380px;
+            width: auto;
             z-index: 2;
             pointer-events: none;
+            mix-blend-mode: screen; 
         }
 
         .contenido-inicio {
@@ -113,7 +115,7 @@
         #inicio .sol-de-justicia {
             font-family: 'Great Vibes', 'Brush Script MT', cursive;
             color: var(--dorado-brillante);
-            font-size: 64px;
+            font-size: 80px;
             display: block;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -129,7 +131,7 @@
         .btn-principal {
             background-color: var(--dorado-brillante);
             color: var(--azul-fondo);
-            padding: 15px 40px;
+            padding: 18px 45px;
             border: none;
             border-radius: 5px;
             font-size: 18px;
@@ -137,23 +139,27 @@
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
         .botones-ubicacion {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
         }
 
         .btn-secundario {
             background-color: transparent;
             border: 2px solid var(--dorado-brillante);
             color: var(--blanco);
-            padding: 10px 25px;
+            padding: 12px 30px;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 160px;
         }
 
         .seccion-mision {
@@ -205,6 +211,13 @@
             .hamburger {
                 display: block;
             }
+            .foto-pastor-salgado {
+                position: relative;
+                top: 0;
+                right: 0;
+                height: 250px;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -232,15 +245,15 @@
         <section id="inicio">
             <img src="Pastor Salgado.gif" alt="Pastor Salgado" class="foto-pastor-salgado">
             <div class="contenido-inicio">
+                <h4>MALAQUÍAS 4:2</h4>
                 <h2>Ministerios</h2>
                 <span class="sol-de-justicia">Sol de Justicia</span>
-                <p>Malaquías 4:2</p>
                 <p>"Mas a vosotros los que teméis mi nombre, nacerá el Sol de justicia, y en sus alas traerá salvación; y saldréis, y saltaréis como becerros de la manada."</p>
                 <a href="#mision" class="btn-principal">Descubre más</a>
                 <div class="botones-ubicacion">
-                    <button class="btn-secundario">Ciudad Juárez, Chih.</button>
-                    <button class="btn-secundario">Torreón, Coah.</button>
-                    <button class="btn-secundario">Veracruz, Chiapas y más</button>
+                    <button class="btn-secundario">SD Juárez</button>
+                    <button class="btn-secundario">Torreón</button>
+                    <button class="btn-secundario">Veracruz</button>
                 </div>
             </div>
         </section>
