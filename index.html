@@ -22,7 +22,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 15px 40px;
             background-color: #07101e;
             border-bottom: 2px solid var(--dorado-brillante);
             position: relative;
@@ -35,12 +35,12 @@
         }
 
         .logo img {
-            height: 50px;
-            margin-right: 15px;
+            height: 45px;
+            margin-right: 12px;
         }
 
         .logo h1 {
-            font-size: 20px;
+            font-size: 18px;
             margin: 0;
             color: var(--blanco);
         }
@@ -53,13 +53,13 @@
         }
 
         nav ul li {
-            margin-left: 25px;
+            margin-left: 20px;
         }
 
         nav ul li a {
             color: var(--blanco);
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
@@ -67,7 +67,7 @@
         nav ul li a.destacado {
             background-color: var(--dorado-brillante);
             color: var(--azul-fondo);
-            padding: 10px 18px;
+            padding: 8px 15px;
             border-radius: 5px;
             font-weight: bold;
         }
@@ -83,18 +83,30 @@
             }
         }
 
+        @keyframes subidaLenta {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         #inicio {
             text-align: center;
-            padding: 100px 20px 60px;
+            padding: 80px 20px 50px;
             position: relative;
             overflow: hidden;
+            animation: subidaLenta 2.5s ease-out;
         }
 
         .foto-pastor-salgado {
             position: absolute;
             top: 20px;
             right: 5%;
-            height: 380px;
+            height: 350px;
             width: auto;
             z-index: 2;
             pointer-events: none;
@@ -105,17 +117,18 @@
         .contenido-inicio {
             position: relative;
             z-index: 5;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         #inicio h4 {
             color: var(--dorado-brillante);
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            font-size: 14px;
         }
 
         #inicio h2 {
-            font-size: 40px;
+            font-size: 32px;
             margin-bottom: 0;
             font-weight: 300;
         }
@@ -123,34 +136,34 @@
         #inicio .sol-de-justicia {
             font-family: 'Great Vibes', 'Brush Script MT', cursive;
             color: var(--dorado-brillante);
-            font-size: 80px;
+            font-size: 70px;
             display: block;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin-top: 5px;
+            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         #inicio p {
             max-width: 800px;
-            margin: 0 auto 50px auto;
+            margin: 0 auto 40px auto;
             line-height: 1.6;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .btn-principal {
             background-color: var(--dorado-brillante);
             color: var(--azul-fondo);
-            padding: 18px 45px;
+            padding: 16px 40px;
             border: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-            animation: entradaProfundidad 1.5s ease-out;
+            animation: entradaProfundidad 2s ease-out;
             transition: transform 0.1s ease;
         }
 
@@ -161,20 +174,20 @@
         .botones-ubicacion {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
         }
 
         .btn-secundario {
             background-color: transparent;
             border: 2px solid var(--dorado-brillante);
             color: var(--blanco);
-            padding: 12px 30px;
+            padding: 10px 25px;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 12px;
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            min-width: 160px;
+            min-width: 140px;
             transition: all 0.2s ease;
         }
 
@@ -186,39 +199,6 @@
 
         .btn-secundario:active {
             transform: scale(0.96);
-        }
-
-        .seccion-mision {
-            padding: 100px 40px;
-            background-color: #0c233a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .texto-mision {
-            max-width: 600px;
-        }
-
-        .texto-mision h3 {
-            color: var(--dorado-brillante);
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .recipiente-foto {
-            width: 400px;
-            height: 300px;
-            border: 2px solid var(--dorado-brillante);
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--dorado-brillante);
-            font-weight: bold;
-            background-color: rgba(0, 0, 0, 0.2);
         }
 
         .hamburger {
@@ -233,6 +213,21 @@
         @media (max-width: 768px) {
             nav ul {
                 display: none;
+                flex-direction: column;
+                background-color: #07101e;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+                border-bottom: 2px solid var(--dorado-brillante);
+            }
+            nav ul.activo {
+                display: flex;
+            }
+            nav ul li {
+                margin: 15px 0;
             }
             .hamburger {
                 display: block;
@@ -241,8 +236,16 @@
                 position: relative;
                 top: 0;
                 right: 0;
-                height: 250px;
+                height: 200px;
                 margin-bottom: 20px;
+            }
+            #inicio {
+                padding: 40px 15px;
+            }
+            .botones-ubicacion {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
             }
         }
     </style>
@@ -263,6 +266,10 @@
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#unete" class="destacado">Únete</a></li>
+                <li><hr style="border-color: var(--dorado-brillante); width: 80%; margin: 10px auto; display: none;" class="sep-movil"></li>
+                <li><a href="#juarez" style="display: none;" class="btn-movil">CD. Juárez</a></li>
+                <li><a href="#torreon" style="display: none;" class="btn-movil">Torreón</a></li>
+                <li><a href="#veracruz" style="display: none;" class="btn-movil">Veracruz</a></li>
             </ul>
         </nav>
     </header>
@@ -283,17 +290,22 @@
                 </div>
             </div>
         </section>
-
-        <section id="mision" class="seccion-mision">
-            <div class="texto-mision">
-                <h3>Nuestra Misión</h3>
-                <p>Aquí puedes escribir la descripción de la misión del ministerio. Este espacio es totalmente editable para que lo actualices cuando quieras.</p>
-            </div>
-            <div class="recipiente-foto">
-                <span>Espacio para tu fotografía</span>
-            </div>
-        </section>
     </main>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navUl = document.querySelector('nav ul');
+        const btnMoviles = document.querySelectorAll('.btn-movil');
+        const sepMovil = document.querySelector('.sep-movil');
+
+        hamburger.addEventListener('click', () => {
+            navUl.classList.toggle('activo');
+            const esActivo = navUl.classList.contains('activo');
+            
+            btnMoviles.forEach(btn => btn.style.display = esActivo ? 'block' : 'none');
+            sepMovil.style.display = esActivo ? 'block' : 'none';
+        });
+    </script>
 </body>
-</html>
+                                     </html>
+                                     
