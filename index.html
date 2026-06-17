@@ -7,11 +7,8 @@
     <style>
         :root {
             --azul-fondo: #0a192f;
-            --azul-secundario: #0c233a;
-            --azul-oscuro: #07101e;
             --dorado-brillante: #d4af37;
             --blanco: #ffffff;
-            --gris-claro: #ccd6f6;
         }
 
         body {
@@ -19,7 +16,6 @@
             font-family: Arial, sans-serif;
             background-color: var(--azul-fondo);
             color: var(--blanco);
-            scroll-behavior: smooth;
         }
 
         header {
@@ -27,13 +23,10 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 40px;
-            background-color: var(--azul-oscuro);
+            background-color: #07101e;
             border-bottom: 2px solid var(--dorado-brillante);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
+            position: relative;
+            z-index: 10;
         }
 
         .logo {
@@ -57,7 +50,6 @@
             display: flex;
             margin: 0;
             padding: 0;
-            align-items: center;
         }
 
         nav ul li {
@@ -68,11 +60,6 @@
             color: var(--blanco);
             text-decoration: none;
             font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--dorado-brillante);
         }
 
         nav ul li a.destacado {
@@ -81,12 +68,6 @@
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        nav ul li a.destacado:hover {
-            background-color: #f1c40f;
-            color: var(--azul-fondo);
         }
 
         @keyframes subirLento {
@@ -100,26 +81,22 @@
             }
         }
 
-        main {
-            margin-top: 90px; /* Evita que el header fijo tape el contenido */
-        }
-
         #inicio {
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
             position: relative;
             overflow: hidden;
             animation: subirLento 2s ease-out;
         }
 
-        .fondo-transparente {
+        /* --- AQUÍ MODIFIQUE EL GIF DEL PASTOR --- */
+        .foto-pastor-salgado {
             position: absolute;
-            top: 5%;
-            right: 15%;
-            width: 300px;
-            height: auto;
-            opacity: 0.08;
-            z-index: 1;
+            top: 40px; /* Ajusta este número si quieres que suba o baje más */
+            right: 8%; /* Lo mantiene a la derecha pero visible */
+            height: 380px; /* Tamaño ampliado para que llegue a la altura de las letras */
+            width: auto; /* Evita que el GIF se deforme */
+            z-index: 2;
             pointer-events: none;
         }
 
@@ -147,7 +124,6 @@
             margin: 0 auto 40px auto;
             line-height: 1.6;
             font-size: 18px;
-            color: var(--gris-claro);
         }
 
         .btn-principal {
@@ -162,18 +138,12 @@
             text-decoration: none;
             display: inline-block;
             margin-bottom: 50px;
-            transition: transform 0.2s;
-        }
-
-        .btn-principal:hover {
-            transform: scale(1.05);
         }
 
         .botones-ubicacion {
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
         }
 
         .btn-secundario {
@@ -184,24 +154,11 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            transition: background 0.3s;
         }
 
-        .btn-secundario:hover {
-            background-color: rgba(212, 175, 55, 0.1);
-        }
-
-        /* Secciones Comunes */
-        .seccion {
-            padding: 80px 40px;
-        }
-
-        .seccion-alt {
-            background-color: var(--azul-secundario);
-        }
-
-        /* Sección Misión / Conócenos */
         .seccion-mision {
+            padding: 100px 40px;
+            background-color: #0c233a;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -213,7 +170,91 @@
             max-width: 600px;
         }
 
-        .texto-mision h3, .seccion h3 {
+        .texto-mision h3 {
             color: var(--dorado-brillante);
             font-size: 32px;
-            margin
+            margin-bottom: 20px;
+        }
+
+        .recipiente-foto {
+            width: 400px;
+            height: 300px;
+            border: 2px solid var(--dorado-brillante);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--dorado-brillante);
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--blanco);
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logosol.png" alt="Ministerios Sol de Justicia">
+            <h1>Ministerios Sol de Justicia</h1>
+        </div>
+        <button class="hamburger" aria-label="Abrir menú">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#conocenos">Conócenos</a></li>
+                <li><a href="#instituto-biblico">Instituto Bíblico</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#unete" class="destacado">Únete</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <img src="Pastor Salgado.gif" alt="Pastor Salgado" class="foto-pastor-salgado">
+            <div class="contenido-inicio">
+                <h2>Ministerios</h2>
+                <span class="sol-de-justicia">Sol de Justicia</span>
+                <p>Malaquías 4:2</p>
+                <p>"Mas a vosotros los que teméis mi nombre, nacerá el Sol de justicia, y en sus alas traerá salvación; y saldréis, y saltaréis como becerros de la manada."</p>
+                <a href="#mision" class="btn-principal">Descubre más</a>
+                <div class="botones-ubicacion">
+                    <button class="btn-secundario">Ciudad Juárez, Chih.</button>
+                    <button class="btn-secundario">Torreón, Coah.</button>
+                    <button class="btn-secundario">Veracruz, Chiapas y más</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="mision" class="seccion-mision">
+            <div class="texto-mision">
+                <h3>Nuestra Misión</h3>
+                <p>Aquí puedes escribir la descripción de la misión del ministerio. Este espacio es totalmente editable para que lo actualices cuando quieras.</p>
+            </div>
+            <div class="recipiente-foto">
+                <span>Espacio para tu fotografía</span>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
