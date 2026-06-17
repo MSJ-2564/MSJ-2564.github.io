@@ -1,248 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ministerios Sol de Justicia</title>
-<style>
-:root {
---primary-bg: #030a1c;
---secondary-gold: #e2b755;
---white-text: #ffffff;
-}
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-margin: 0;
-padding: 0;
-background-color: var(--primary-bg);
-color: var(--white-text);
-}
-header {
-background-color: #020610;
-padding: 25px 50px;
-border-bottom: 2px solid var(--secondary-gold);
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-.top-bar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.logo-container {
-display: flex;
-align-items: center;
-font-size: 26px;
-font-weight: 700;
-}
-.logo-img {
-max-width: 55px;
-height: auto;
-margin-right: 15px;
-}
-.logo-text-ministerios {
-color: var(--white-text);
-}
-.logo-text-gold {
-color: var(--secondary-gold);
-font-style: italic;
-font-family: 'Georgia', serif;
-font-weight: 400;
-}
-nav {
-display: flex;
-align-items: center;
-}
-.nav-links {
-list-style: none;
-display: flex;
-margin: 0;
-padding: 0;
-}
-.nav-links li {
-margin-left: 35px;
-}
-.nav-links a {
-color: var(--white-text);
-text-decoration: none;
-font-size: 16px;
-transition: color 0.3s ease;
-}
-.nav-links a:hover, .nav-links a.active {
-color: var(--secondary-gold);
-font-weight: 600;
-}
-.menu-toggle {
-display: none;
-flex-direction: column;
-cursor: pointer;
-}
-.menu-toggle span {
-height: 3px;
-width: 25px;
-background: var(--secondary-gold);
-margin-bottom: 5px;
-border-radius: 4px;
-transition: all 0.3s ease;
-}
-.sub-nav {
-display: flex;
-justify-content: center;
-margin-top: 20px;
-list-style: none;
-padding: 0;
-}
-.sub-nav li {
-margin: 0 20px;
-}
-.sub-nav a {
-color: var(--white-text);
-text-decoration: none;
-font-size: 15px;
-transition: color 0.3s ease;
-}
-.sub-nav a:hover {
-color: var(--secondary-gold);
-}
-main {
-padding: 80px 20px;
-text-align: center;
-}
-.verse-title {
-color: var(--secondary-gold);
-font-size: 32px;
-margin-bottom: 15px;
-font-weight: 600;
-}
-.verse-text {
-font-size: 24px;
-font-style: italic;
-line-height: 1.8;
-max-width: 850px;
-margin: 0 auto 40px;
-}
-.btn-conoce {
-background-color: transparent;
-color: var(--secondary-gold);
-border: 2px solid var(--secondary-gold);
-padding: 12px 35px;
-font-size: 16px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s ease;
-border-radius: 4px;
-}
-.btn-conoce:hover {
-background-color: var(--secondary-gold);
-color: var(--primary-bg);
-box-shadow: 0 0 15px rgba(229, 183, 85, 0.4);
-}
-.hidden-sections {
-margin-top: 60px;
-}
-.city-btn {
-background-color: #111d35;
-color: var(--white-text);
-border: 1px solid var(--secondary-gold);
-padding: 12px 25px;
-margin: 0 15px;
-cursor: pointer;
-font-size: 15px;
-border-radius: 4px;
-transition: all 0.3s ease;
-}
-.city-btn:hover {
-background-color: var(--secondary-gold);
-color: var(--primary-bg);
-}
-@media (max-width: 900px) {
-.nav-links {
-display: none;
-flex-direction: column;
-position: absolute;
-top: 96px;
-right: 0;
-background-color: #020610;
-width: 100%;
-text-align: center;
-border-bottom: 4px solid var(--secondary-gold);
-padding-bottom: 20px;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-.nav-links.active {
-display: flex;
-}
-.nav-links li {
-margin: 15px 0 0;
-}
-.menu-toggle {
-display: flex;
-}
-.sub-nav {
-flex-direction: column;
-align-items: center;
-}
-.sub-nav li {
-margin: 10px 0;
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministerios Sol de Justicia</title>
 </head>
 <body>
-<header>
-<div class="top-bar">
-<div class="logo-container">
-<img src="tu-logo.png" alt="Logo" class="logo-img">
-<div>
-<span class="logo-text-ministerios">Ministerios</span>
 
-<span class="logo-text-gold">Sol de Justicia</span>
-</div>
-</div>
-<nav>
-<div class="menu-toggle" id="mobile-menu">
-<span></span>
-<span></span>
-<span></span>
-</div>
-<ul class="nav-links" id="nav-list">
-<li><a href="#" class="active">Inicio</a></li>
-<li><a href="#">Conócenos</a></li>
-<li><a href="#">Instituto Bíblico</a></li>
-<li><a href="#">Galería</a></li>
-<li><a href="#">Contáctanos</a></li>
-<li><a href="#">Únete a nosotros</a></li>
-</ul>
-</nav>
-</div>
-<ul class="sub-nav">
-<li><a href="#">Torreón</a></li>
-<li><a href="#">Ciudad Juárez</a></li>
-<li><a href="#">Veracruz con Chiapas</a></li>
-</ul>
-</header>
-<main>
-<h2 class="verse-title">Malaquías 4:2</h2>
-<p class="verse-text">"Mas a vosotros los que teméis mi nombre, nacerá el Sol de justicia, y en sus alas traerá salvación; y saldréis, y saltaréis como becerros de la manada."</p>
-<button class="btn-conoce" id="btn-conoce-mas">Conoce más</button>
-<div class="hidden-sections" id="secciones-ocultas" style="display: none;">
-<p>Selecciona una región para ver más detalles:</p>
-<button class="city-btn">Ciudad Juárez</button>
-<button class="city-btn">Torreón</button>
-<button class="city-btn">Veracruz con Chiapas</button>
-</div>
-</main>
-<script>
-const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.getElementById('nav-list');
-const btnConoceMas = document.getElementById('btn-conoce-mas');
-const seccionesOcultas = document.getElementById('secciones-ocultas');
-mobileMenu.addEventListener('click', () => {
-navList.classList.toggle('active');
-});
-btnConoceMas.addEventListener('click', () => {
-seccionesOcultas.style.display = 'block';
-btnConoceMas.style.display = 'none';
-});
-</script>
+    <header>
+        <div class="logo">
+            <img src="ruta-de-tu-logo.png" alt="Logotipo">
+            <h1>Ministerios Sol de Justicia</h1>
+        </div>
+        <button class="hamburger" aria-label="Abrir menú">☰</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#conocenos">Conócenos</a></li>
+                <li><a href="#instituto-biblico">Instituto Bíblico</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#unete" class="destacado">Únete</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Ministerios Sol de Justicia</h2>
+            <p>Malaquías 4:2</p>
+            <p>"Mas a vosotros los que teméis mi nombre, nacerá el Sol de justicia, y en sus alas traerá salvación; y saldréis, y saltaréis como becerros de la manada."</p>
+            <button class="btn-principal">Descubre más</button>
+            <div class="botones-ubicacion">
+                <button class="btn-secundario">Ciudad Juárez, Chih.</button>
+                <button class="btn-secundario">Torreón, Coah.</button>
+                <button class="btn-secundario">Veracruz, Chiapas y más</button>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
